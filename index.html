@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ジムサポ | バックオフィス支援サービス | 株式会社ペイフォワード</title>
+  <title>事務サポ | バックオフィス支援サービス | 株式会社ペイフォワード</title>
   <meta name="description" content="10〜30名規模の企業に特化した伴走型バックオフィス支援。経理・労務・総務を一つの窓口でまるごとお任せ。社長を事務作業から解放します。">
+  <link rel="preload" href="assets/fv_main.jpg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -177,19 +178,19 @@
     }
     .hero-bubble:nth-child(1) {
       width: 52px; height: 52px;
-      top: 2%; right: 12%;
+      top: 2%; right: 3%;
       opacity: 0.7;
       animation-delay: 0s;
     }
     .hero-bubble:nth-child(2) {
       width: 32px; height: 32px;
-      top: 14%; right: 2%;
+      top: 14%; right: -2%;
       opacity: 0.5;
       animation-delay: 0.9s;
     }
     .hero-bubble:nth-child(3) {
       width: 20px; height: 20px;
-      top: 5%; right: 30%;
+      top: 5%; right: 16%;
       opacity: 0.4;
       animation-delay: 1.7s;
     }
@@ -236,7 +237,7 @@
       .hero-marquee-wrap { top: 52px; }
       #hero { padding: 72px 20px 60px; }
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-      .hero-image { order: -1; }
+      .hero-image { order: -1; margin-top: 20px; }
       .hero-image-placeholder { aspect-ratio: 16/9; }
     }
     .btn-primary {
@@ -595,8 +596,9 @@
     .services-header { text-align: center; margin-bottom: 56px; }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
+      align-items: start;
     }
     .service-card {
       background: var(--bg-soft);
@@ -818,6 +820,8 @@
     .marquee-wrapper {
       display: flex; flex-direction: column; gap: 18px;
       overflow: hidden;
+      padding: 12px 0;
+      margin: -12px 0;
     }
     .marquee-track {
       display: flex; gap: 18px;
@@ -833,25 +837,17 @@
       from { transform: translateX(-50%); }
       to { transform: translateX(0); }
     }
-    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
     .testimonial-card {
       position: relative;
-      background: transparent;
+      background: rgba(255,255,255,0.42);
       border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.80);
+      box-shadow:
+        0 3px 10px rgba(3,135,244,0.10),
+        0 1px 4px rgba(15,173,218,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.95);
       padding: 26px 26px 22px;
       width: 310px; flex-shrink: 0;
-      isolation: isolate;
-    }
-    .testimonial-card::before {
-      content: '';
-      position: absolute; inset: 0;
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(8px) saturate(160%);
-      -webkit-backdrop-filter: blur(8px) saturate(160%);
-      border: 1px solid rgba(255, 255, 255, 0.65);
-      box-shadow: 0 4px 24px rgba(3,135,244,0.07), 0 1px 0 rgba(255,255,255,0.9) inset;
-      z-index: -1;
     }
     .testimonial-stars {
       font-size: 0.95rem; margin-bottom: 10px;
@@ -1236,7 +1232,8 @@
       .testimonial-card { width: 272px; padding: 18px 18px 16px; }
       .testimonial-text { font-size: 13px; margin-bottom: 12px; }
       .testimonial-stars { font-size: 0.82rem; margin-bottom: 8px; }
-      .steps-grid { grid-template-columns: 1fr; gap: 0; max-width: 100%; margin-bottom: 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; gap: 0; max-width: 480px; margin-left: auto; margin-right: auto; margin-bottom: 24px; }
       .steps-connector { display: none; }
       .step-item {
         display: flex; align-items: flex-start; gap: 20px;
@@ -1278,7 +1275,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a href="#" class="site-header__logo">
-      <img src="assets/logo.png" alt="ジムサポ" height="36">
+      <img src="assets/logo.png" alt="事務サポ" height="36">
     </a>
     <nav class="site-header__nav">
       <a href="#reasons">選ばれる理由</a>
@@ -1320,7 +1317,7 @@
         伴走型バックオフィス支援。
       </p>
       <div class="hero-cta-group">
-        <a href="#steps" class="btn-primary">
+        <a href="https://lin.ee/UXzkcix" class="btn-primary" target="_blank" rel="noopener">
           まずは無料でカジュアル面談
         </a>
       </div>
@@ -1331,7 +1328,7 @@
       <div class="hero-bubble"></div>
       <div class="hero-bubble"></div>
       <div class="hero-bubble"></div>
-      <img src="assets/fv_main.jpg" alt="ジムサポ メインビジュアル" class="hero-img">
+      <img src="assets/fv_main.jpg" alt="事務サポ メインビジュアル" class="hero-img">
     </div>
   </div>
 </section>
@@ -1372,8 +1369,8 @@
   <div class="container">
     <div class="cases-header">
       <h2 class="section-title">賢い経営者は、<br>バックオフィスを<br class="sp-br">「持たない」</h2>
-      <p class="section-desc">正社員1ヶ月分のコストで、<br class="sp-br">ジムサポなら最大10か月分の体制が整う。<br>小規模経営にこそ、<br class="sp-br">外注という戦略的な選択を。</p>
-      <p class="cases-sub">ジムサポなら「ひとりを雇う」より賢く、<br class="sp-br">「自分でやる」より速い。</p>
+      <p class="section-desc">正社員1ヶ月分のコストで、<br class="sp-br">事務サポなら最大10か月分の体制が整う。<br>小規模経営にこそ、<br class="sp-br">外注という戦略的な選択を。</p>
+      <p class="cases-sub">事務サポなら「ひとりを雇う」より賢く、<br class="sp-br">「自分でやる」より速い。</p>
     </div>
     <div class="cases-carousel-wrap">
     <button class="cases-arrow cases-arrow-prev" id="casesPrev" aria-label="前へ">
@@ -1395,7 +1392,7 @@
           <div class="case-saving"><strong>85,000円</strong><span class="saving-unit">/月</span>のコストを削減！</div>
         </div>
         <div class="case-photo">
-          <img src="assets/case_1.jpg" alt="採用の負のループを断つ">
+          <img src="assets/case_1.jpg" alt="採用の負のループを断つ" loading="lazy">
         </div>
         <div class="case-body">
           <div class="case-meta">IT系 ／ 従業員数 18名</div>
@@ -1414,7 +1411,7 @@
           <div class="case-saving"><strong>50,000円</strong><span class="saving-unit">/月</span>の管理費を削減！</div>
         </div>
         <div class="case-photo">
-          <img src="assets/case_2.jpg" alt="現場と事務の板挟みを断つ">
+          <img src="assets/case_2.jpg" alt="現場と事務の板挟みを断つ" loading="lazy">
         </div>
         <div class="case-body">
           <div class="case-meta">飲食・サロン ／ 従業員数 5名</div>
@@ -1433,7 +1430,7 @@
           <div class="case-saving"><strong>200,000円</strong><span class="saving-unit">/月</span>の管理費を削減！</div>
         </div>
         <div class="case-photo">
-          <img src="assets/case_3.jpg" alt="管理のブラックボックス化を断つ">
+          <img src="assets/case_3.jpg" alt="管理のブラックボックス化を断つ" loading="lazy">
         </div>
         <div class="case-body">
           <div class="case-meta">店舗展開・サービス業 ／ 従業員数 20名</div>
@@ -1452,7 +1449,7 @@
           <div class="case-saving"><strong>150,000円<span style="font-size:0.75em;">分</span></strong><span class="saving-unit">/月</span>の損失を解消！</div>
         </div>
         <div class="case-photo">
-          <img src="assets/case_4.jpg" alt="看板スタッフの疲弊を断つ">
+          <img src="assets/case_4.jpg" alt="看板スタッフの疲弊を断つ" loading="lazy">
         </div>
         <div class="case-body">
           <div class="case-meta">コンサル・制作業 ／ 従業員数 10名</div>
@@ -1471,7 +1468,7 @@
           <div class="case-saving"><strong>70,000円<span style="font-size:0.75em;">分</span></strong><span class="saving-unit">/月</span>の時間を創出！</div>
         </div>
         <div class="case-photo">
-          <img src="assets/case_5.jpg" alt="社長のタダ働きを断つ">
+          <img src="assets/case_5.jpg" alt="社長のタダ働きを断つ" loading="lazy">
         </div>
         <div class="case-body">
           <div class="case-meta">IT系 ／ 従業員数 3名</div>
@@ -1500,11 +1497,11 @@
   <div class="container">
     <div class="reasons-header">
       <span class="section-label">Why choose us</span>
-      <h2 class="section-title">ジムサポが選ばれる<br><span class="num">３</span>つの理由</h2>
+      <h2 class="section-title">事務サポが選ばれる<br><span class="num">３</span>つの理由</h2>
     </div>
     <div class="reasons-grid">
       <div class="reason-card fade-up">
-        <img src="assets/illust_1.png" alt="" class="reason-card-img">
+        <img src="assets/illust_1.png" alt="" class="reason-card-img" loading="lazy">
         <div class="reason-num">01</div>
         <div class="reason-title">
           <div class="tag">完全丸投げ</div><br>
@@ -1513,7 +1510,7 @@
         <p class="reason-body">指定フォーマットへの入力や資料整理の手間は一切ありません。領収書も書類も、ただ共有いただくだけ。社長を事務作業から完全に解放し、本業に100%集中できる「自由な時間」を最速で創り出します。</p>
       </div>
       <div class="reason-card fade-up">
-        <img src="assets/illust_2.png" alt="" class="reason-card-img">
+        <img src="assets/illust_2.png" alt="" class="reason-card-img" loading="lazy">
         <div class="reason-num">02</div>
         <div class="reason-title">
           <div class="tag">完全統合</div><br>
@@ -1522,7 +1519,7 @@
         <p class="reason-body">「経理はあっち、労務はこっち」というバラバラな管理と、二重連絡のストレスを終わらせます。バックオフィス全般を一つの窓口でシームレスに連携します。</p>
       </div>
       <div class="reason-card fade-up">
-        <img src="assets/illust_3.png" alt="" class="reason-card-img">
+        <img src="assets/illust_3.png" alt="" class="reason-card-img" loading="lazy">
         <div class="reason-num">03</div>
         <div class="reason-title">
           <div class="tag">攻めの経営支援</div><br>
@@ -1545,31 +1542,45 @@
     <div class="services-grid">
       <div class="service-card fade-up">
         <div class="service-trigger">
-          <div class="service-name">記帳・経理代行</div>
+          <div class="service-name">経理・記帳代行</div>
           <svg class="service-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="service-body"><p class="service-desc">日々の仕訳入力から月次決算まで。領収書を送るだけでOK。</p></div>
+        <div class="service-body"><p class="service-desc">日々の仕訳入力から月次決算まで、領収書を送るだけで対応。煩雑な記帳業務を代行し、正確な経理基盤を構築します。</p></div>
       </div>
       <div class="service-card fade-up">
         <div class="service-trigger">
           <div class="service-name">労務管理</div>
           <svg class="service-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="service-body"><p class="service-desc">給与計算・入退社手続き・社会保険手続きを一括対応。</p></div>
+        <div class="service-body"><p class="service-desc">給与計算や入退社・社会保険の手続きを一括で引き受け。専門知識が必要な事務作業を支え、組織の円滑な運営を助けます。</p></div>
       </div>
       <div class="service-card fade-up">
         <div class="service-trigger">
           <div class="service-name">総務・庶務サポート</div>
           <svg class="service-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="service-body"><p class="service-desc">契約書管理・備品発注・各種申請など煩雑な総務業務をサポート。</p></div>
+        <div class="service-body"><p class="service-desc">契約書管理・備品発注・各種申請など、煩雑な業務を幅広くサポート。事務負担を軽減し、業務に集中できる環境を整えます。</p></div>
       </div>
       <div class="service-card fade-up">
         <div class="service-trigger">
-          <div class="service-name">ITツール導入支援</div>
+          <div class="service-name">経営コンサルティング</div>
           <svg class="service-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="service-body"><p class="service-desc">会計ソフト・勤怠管理など業務効率化ツールの選定・設定を代行。</p></div>
+        <div class="service-body"><p class="service-desc">定期的な経営相談と事業計画の作成を通じ、中長期の成長を支援。経理・労務まで把握した一歩踏み込んだ提案で、経営判断を加速させます。</p></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-trigger">
+          <div class="service-name">HP・LP制作・保守運用</div>
+          <svg class="service-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="service-body"><p class="service-desc">新規制作から既存サイトの改修まで、企業の魅力を最大限に引き出すクリエイティブを提供。GA4分析に基づいた保守や改善提案まで一貫して担い、Web周りの不安をゼロにします。</p></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-trigger">
+          <div class="service-name">動画・バナー制作</div>
+          <svg class="service-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="service-body"><p class="service-desc">サイトの運用データに基づき、今必要な訴求を動画やバナーへ迅速に展開します。制作から効果測定後の改善まで一括管理することで、広報戦略のスピードと精度を最大化します。</p></div>
       </div>
     </div>
   </div>
@@ -1597,7 +1608,6 @@
             <li>仕訳代行：月100仕訳まで</li>
             <li>請求書等作成：月5件まで</li>
             <li>給与計算：対象外</li>
-            <li>基本サポート</li>
           </ul>
         </div>
       </div>
@@ -1612,8 +1622,6 @@
             <li>仕訳代行：月100仕訳まで</li>
             <li>請求書等作成：月5件まで</li>
             <li>給与計算：10人以下</li>
-            <li>月平均12,000円</li>
-            <li>優先サポート</li>
           </ul>
         </div>
       </div>
@@ -1629,9 +1637,6 @@
             <li>仕訳代行：200仕訳まで</li>
             <li>請求書等作成：月10件まで</li>
             <li>給与計算：20人以下</li>
-            <li>月平均35,000円</li>
-            <li>優先サポート</li>
-            <li>カスタムレポート</li>
           </ul>
         </div>
       </div>
@@ -1656,7 +1661,7 @@
     <div class="testimonials-header">
       <span class="section-label">Voice</span>
       <h2 class="section-title">お客様の声</h2>
-      <p class="section-desc" style="margin: 0 auto;">ジムサポを導入した経営者様からのリアルな声をご紹介します。</p>
+      <p class="section-desc" style="margin: 0 auto;">事務サポを導入した経営者様からのリアルな声をご紹介します。</p>
     </div>
   </div>
   <div class="marquee-wrapper">
@@ -1735,7 +1740,7 @@
       </div>
     </div>
     <div class="steps-cta">
-      <a href="https://lin.ee/XXXXXXX" class="btn-grad" target="_blank" rel="noopener">
+      <a href="https://lin.ee/UXzkcix" class="btn-grad" target="_blank" rel="noopener">
         まずは無料でカジュアル面談
       </a>
       <p class="steps-sub-note">登録30秒 &nbsp;·&nbsp; 完全無料 &nbsp;·&nbsp; しつこい営業は一切なし</p>
@@ -1862,7 +1867,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
-    <img src="assets/logo.png" alt="ジムサポ" height="26" style="filter: brightness(0) invert(1); opacity: 0.6;">
+    <img src="assets/logo.png" alt="事務サポ" height="26" style="filter: brightness(0) invert(1); opacity: 0.6;">
   </div>
   <nav class="footer-nav">
     <a href="#reasons">選ばれる理由</a>
@@ -1874,6 +1879,7 @@
   <div class="footer-divider"></div>
   <div class="footer-legal">
     <a href="#" id="openPrivacy">プライバシーポリシー</a>
+    <a href="#" id="operatorLink">運営会社</a>
   </div>
   <p class="footer-copy">© 2025 株式会社ペイフォワード. All rights reserved.</p>
 </footer>
@@ -1883,7 +1889,7 @@
   <div style="background:#fff; max-width:680px; margin:0 auto; border-radius:16px; padding:48px 40px; position:relative;">
     <button id="closePrivacy" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:1.4rem; cursor:pointer; color:#8aa0b4;">✕</button>
     <h2 style="font-size:1.2rem; font-weight:800; margin-bottom:24px; color:#1a2e3d;">プライバシーポリシー</h2>
-    <p style="font-size:0.85rem; color:#4a6278; line-height:1.9; margin-bottom:16px;">株式会社ペイフォワード（以下「当社」）は、ジムサポサービスにおける利用者の個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+    <p style="font-size:0.85rem; color:#4a6278; line-height:1.9; margin-bottom:16px;">株式会社ペイフォワード（以下「当社」）は、事務サポサービスにおける利用者の個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
     <h3 style="font-size:0.92rem; font-weight:700; margin:20px 0 8px; color:#1a2e3d;">1. 取得する個人情報</h3>
     <p style="font-size:0.85rem; color:#4a6278; line-height:1.9;">お問い合わせ・ご相談の際に、お名前・会社名・メールアドレス・電話番号等をご提供いただく場合があります。</p>
     <h3 style="font-size:0.92rem; font-weight:700; margin:20px 0 8px; color:#1a2e3d;">2. 利用目的</h3>
@@ -1899,7 +1905,7 @@
 </div>
 
 <!-- FIXED LINE BUTTON -->
-<a href="https://lin.ee/XXXXXXX" class="fixed-line" id="fixedLine" target="_blank" rel="noopener">
+<a href="https://lin.ee/UXzkcix" class="fixed-line" id="fixedLine" target="_blank" rel="noopener">
   <span class="label">まずはLINEでカジュアル面談</span>
 </a>
 
